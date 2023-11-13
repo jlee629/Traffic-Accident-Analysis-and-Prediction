@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group 6 Prediction model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+
+    <nav>
+        <div class="leftChils">
+            <i class="fa-solid fa-car navChil"></i>
+            <p class="navChil">KSI Prediction Model</p>
+        </div>
+        <span class="navChil navSpan">COMP247 Group 6 Final Project</span>
+    </nav>
+
+    <h1>{{ name }}</h1>
+
+    <main>
+
+        <div class="inputsBox mainBox">
+            <table>
+                <tr>
+                    <td><label for="district">District</label></td>
+                    <td><label for="visibility">Visibility</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="district">
+                            <option value="Toronto and East York">Toronto and East York</option>
+                            <option value="Etobicoke York">Etobicoke York</option>
+                            <option value="Scarborough">Scarborough</option>
+                            <option value="North York">North York</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="visibility">
+                            <option value="Clear">Clear</option>
+                            <option value="Rain">Rain</option>
+                            <option value="Other">Other</option>
+                            <option value="Snow">Snow</option>
+                            <option value="Strong wind">Strong wind</option>
+                            <option value="Freezing Rain">Freezing Rain</option>
+                            <option value="Fog, Mist, Smoke, Dust">Fog, Mist, Smoke, Dust</option>
+                            <option value="Drifting Snow">Drifting Snow</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="light">Light</label></td>
+                    <td><label for="RDSFCOND">RDSFCOND</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="light">
+                            <option value="Dark">Dark</option>
+                            <option value="Dusk">Dusk</option>
+                            <option value="Daylight">Daylight</option>
+                            <option value="Dark, artificial">Dark, artificial</option>
+                            <option value="Dawn">Dawn</option>
+                            <option value="Dusk, artificial">Dusk, artificial</option>
+                            <option value="Dawn, artificial">Dawn, artificial</option>
+                            <option value="Daylight, artificial">Daylight, artificial</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="RDSFCOND">
+                            <option value="Wet">Wet</option>
+                            <option value="Dry">Dry</option>
+                            <option value="Other">Other</option>
+                            <option value="Slush">Slush</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Loose Snow">Loose Snow</option>
+                            <option value="Packed Snow">Packed Snow</option>
+                            <option value="Spilled liquid">Spilled liquid</option>
+                            <option value="Loose Sand or Gravel">Loose Sand or Gravel</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="invage">Invage</label></td>
+                    <td><label for="pedestrian">Pedestrian</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="invage">
+                            <option value="30 to 59">30 to 59</option>
+                            <option value="0 to 29">0 to 29</option>
+                            <option value="unknown">unknown</option>
+                            <option value="60 and above">60 and above</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="pedestrian">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cyclist">Cyclist</label></td>
+                    <td><label for="automobile">Automobile</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="cyclist">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="automobile">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="motorcycle">Motorcycle</label></td>
+                    <td><label for="truck">Truck</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="motorcycle">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="truck">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="TRSN_CITY_VEH">TRSN city vehicle</label></td>
+                    <td><label for="EMERG_VEH">Emergency vehicle</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="TRSN_CITY_VEH">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="EMERG_VEH">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="PASSENGER">Passenger</label></td>
+                    <td><label for="SPEEDING">Speeding</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="PASSENGER">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="SPEEDING">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="AG_DRIV">Aggressive driving</label></td>
+                    <td><label for="REDLIGHT">Red light</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="AG_DRIV">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="REDLIGHT">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ALCOHOL">Alcohol</label></td>
+                    <td><label for="DISABILITY">Disability</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="ALCOHOL">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="DISABILITY">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+
+        
+        </div>
+
+        <div class="resultBox mainBox">
+            <button id="predictButton">Predict</button>
+            <div class="predBox">
+                <p class="resultTxt">Result :</p>
+                <p id="predictionResult"></p>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Centennial College 2023 Summer 
+            COMP247 Final Project Group 6 -
+            Alejandro Akifarry,
+            Jungyu Lee,
+            Minyoung Seol</p>
+    </footer>
+    
+
+    <script>
+        document.getElementById("predictButton").addEventListener("click", function() {
+            const selectedDistrict = document.getElementById("district").value;
+            const selectedVisibility = document.getElementById("visibility").value;
+            const selectedLight = document.getElementById("light").value;
+            const selectedRDSFCOND = document.getElementById("RDSFCOND").value;
+            const selectedInvage = document.getElementById("invage").value;
+            const selectedPEDESTRIAN = document.getElementById("pedestrian").value;
+            const selectedCYCLIST = document.getElementById("cyclist").value;
+            const selectedAUTOMOBILE = document.getElementById("automobile").value;
+            const selectedMOTORCYCLE = document.getElementById("motorcycle").value;
+            const selectedTRUCK = document.getElementById("truck").value;
+            const selectedTRSN_CITY_VEH = document.getElementById("TRSN_CITY_VEH").value;
+            const selectedEMERG_VEH = document.getElementById("EMERG_VEH").value;
+            const selectedPASSENGER = document.getElementById("PASSENGER").value;
+            const selectedSPEEDING = document.getElementById("SPEEDING").value;
+            const selectedAG_DRIV = document.getElementById("AG_DRIV").value;
+            const selectedREDLIGHT = document.getElementById("REDLIGHT").value;
+            const selectedALCOHOL = document.getElementById("ALCOHOL").value;
+            const selectedDISABILITY = document.getElementById("DISABILITY").value;
+
+            const data = {
+                "DISTRICT": selectedDistrict,
+                "VISIBILITY": selectedVisibility,
+                "LIGHT": selectedLight,
+                "RDSFCOND": selectedRDSFCOND,
+                "INVAGE": selectedInvage,
+                "PEDESTRIAN": selectedPEDESTRIAN,
+                "CYCLIST": selectedCYCLIST,
+                "AUTOMOBILE": selectedAUTOMOBILE,
+                "MOTORCYCLE": selectedMOTORCYCLE,
+                "TRUCK": selectedTRUCK,
+                "TRSN_CITY_VEH": selectedTRSN_CITY_VEH,
+                "EMERG_VEH": selectedEMERG_VEH,
+                "PASSENGER": selectedPASSENGER,
+                "SPEEDING": selectedSPEEDING,
+                "AG_DRIV": selectedAG_DRIV,
+                "REDLIGHT": selectedREDLIGHT,
+                "ALCOHOL": selectedALCOHOL,
+                "DISABILITY": selectedDISABILITY
+            };
+
+            fetch("/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                const predictionResult = document.getElementById("predictionResult");
+
+                if(result.prediction == 1){
+                    predictionResult.innerHTML = "Prediction: " + result.prediction + " (Fatal)";
+                }
+                else{
+                    predictionResult.innerHTML = "Prediction: " + result.prediction + " (Not Fatal)";
+                }
+                
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+
+<script src="https://kit.fontawesome.com/7b0733e395.js" crossorigin="anonymous"></script>
+
+</div>
+</body>
+</html>

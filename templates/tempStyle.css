@@ -1,0 +1,132 @@
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(234, 237, 240);
+}
+
+.wrapper{
+    /* border:1px solid red; */
+    min-width: 900px;
+    max-width:1100px;
+    margin: 20px auto 50px;
+}
+
+nav{
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding:25px 40px;
+    cursor:default;
+    /* background-color: rgb(255, 255, 255); */
+    align-items: center;
+}
+.leftChils{
+    display: flex;
+    align-items: center;
+    color:rgb(63, 77, 104);
+    font-weight: bolder;
+}
+.navChil{
+    display: inline-block;
+}
+.fa-car{
+    margin-right:15px;
+    font-size: xx-large;
+}
+.navSpan{
+    font-size:smaller;
+    color:rgb(125, 125, 125);
+}
+
+h1{
+    text-align:center;
+    margin:25px 0 55px;
+    color:rgb(63, 77, 104);
+    font-size: xx-large;
+}
+
+main{
+    /* border:1px solid blue; */
+    display: flex;
+    justify-content: space-around;
+}
+.mainBox{
+    width:45%;
+}
+.inputsBox{
+    /* border: 1px solid purple; */
+    padding:15px 0;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+table{
+    margin: 0 auto;
+}
+td{
+    padding:2px 25px 4px;
+}
+label{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 4px;
+    font-weight: bold;
+    color:rgb(63, 77, 104);
+}
+select{
+    display: inline-block;
+    margin:5px 0;
+    padding:3px 6px;
+    border-radius: 3px;
+    border:none;
+    background-color: rgb(226, 226, 226);
+}
+
+.resultBox{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#predictButton{
+    display: block;
+    margin:10px auto 30px;
+    padding:10px 23px;
+    cursor:pointer;
+    background-color: rgb(63, 77, 104);
+    border:none;
+    color:white;
+    font-size: larger;
+    text-transform: uppercase;
+    border-radius: 7px;
+}
+.predBox{
+    background-color: whitesmoke;
+    text-align: center;
+    width:70%;
+    margin:0 auto;
+    padding:15px 0 30px;
+    border-radius: 10px;
+}
+.resultTxt{
+    margin-bottom:15px;
+    font-size: small;
+    color:rgb(166, 166, 166);
+}
+#predictionResult{
+    color:brown;
+    font-weight: bolder;
+    font-size: large;
+}
+
+footer{
+    text-align: center;
+    width:100%;
+    margin: 60px auto 0;
+    color: rgb(138, 138, 138);
+    font-size: x-small;
+}
+
